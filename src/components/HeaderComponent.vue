@@ -30,52 +30,52 @@ export default {
         {
           text: 'character',
           source: '#',
-          active: false,
+          
         },
         {
           text: 'comics',
           source: '#',
-          active: false,
+          
         },
         {
           text: 'movies',
           source: '#',
-          active: false,
+          
         },
         {
           text: 'tv',
           source: '#',
-          active: false,
+          
         },
         {
           text: 'games',
           source: '#',
-          active: false,
+          
         },
         {
           text: 'collectibles',
           source: '#',
-          active: false,
+          
         },
         {
           text: 'videos',
           source: '#',
-          active: false,
+          
         },
         {
           text: 'fans',
           source: '#',
-          active: false,
+          
         },
         {
           text: 'news',
           source: '#',
-          active: false,
+          
         },
         {
           text: 'shop',
           source: '#',
-          active: false,
+          
         },
       ]
     }
@@ -92,27 +92,28 @@ export default {
     height: 120px;
 
     ._row {
-      height: 100%;
       justify-content: space-between;
-      align-items: center;
-
+      
       ._row img {
         max-width: 80px;
       }
 
       ul {
         text-align: right;
-      }
-      
-      ul li a {
-        margin: 0 10px;
-        text-transform: uppercase;
-        font-size: .7rem;
-      }
 
-      ul li a.active {
-        padding-bottom: 49.5px;
-        border-bottom: 4px solid $dc-color;
+        li {
+
+          a {
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: .7rem;
+
+            &.active {
+              padding-bottom: 49px;
+              border-bottom: 4px solid $dc-color;
+            }
+          }
+        }
       }
     }
   }
