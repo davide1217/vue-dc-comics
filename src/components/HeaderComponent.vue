@@ -1,18 +1,17 @@
 <template>
   <header>
-    <div class="_container">
-      <div class="container-fluid">
-        <div class="row _row">
-          <div class="col-1 _col"><img src="../assets/img/dc-logo.png" alt=""></div>
-          <ul class="col-11">
+    <div class="_container d-flex justify-content-between align-items-center">
+      
+        
+          <div class="d-flex align-items-center"><img src="../assets/img/dc-logo.png" alt=""></div>
+          <ul>
             <li v-for="(link, index) in headMenu"
-              @click="linkAttivo = index "
               :key="`headMenu-${index}`">
               <a :class="{ 'active' : linkAttivo == index}" :href="link.source">{{ link.text }}</a>
             </li>
           </ul>
-        </div>
-      </div>
+        
+      
     </div>
   </header>
 </template>
@@ -23,8 +22,6 @@ export default {
 
   data() {
     return {
-
-      linkAttivo: null,
 
       headMenu: [
         {
@@ -90,28 +87,25 @@ export default {
 
   header {
     height: 120px;
-
-    ._row {
-      justify-content: space-between;
       
-      ._row img {
-        max-width: 80px;
-      }
+    img {
+      max-width: 80px;
+    }
 
-      ul {
-        text-align: right;
+    ul {
+      text-align: right;
 
-        li {
+      li {
+        display: inline-block;
 
-          a {
-            margin: 0 10px;
-            text-transform: uppercase;
-            font-size: .7rem;
+        a {
+          margin: 0 10px;
+          text-transform: uppercase;
+          font-size: .7rem;
 
-            &.active {
-              padding-bottom: 49px;
-              border-bottom: 4px solid $dc-color;
-            }
+          &:focus {
+            padding-bottom: 49px;
+            border-bottom: 4px solid $dc-color;
           }
         }
       }

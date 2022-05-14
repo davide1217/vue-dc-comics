@@ -28,4 +28,8 @@ export default {
   @import "./assets/vars";
   @import "./assets/global";
   @import "./assets/utilities";
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 </style>

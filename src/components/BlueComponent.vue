@@ -15,12 +15,12 @@
           </div>
 
           <div class="col _col">
-            <img src="../assets/img/buy-comics-shop-locator.png" alt="">
+            <img  src="../assets/img/buy-comics-subscriptions.png" alt="">
             <div>subscription</div>
           </div>
 
           <div class="col _col">
-            <img src="../assets/img/buy-comics-subscriptions.png" alt="">
+            <img id="locator" src="../assets/img/buy-comics-shop-locator.png" alt="">
             <div>comic shop locator</div>
           </div>
 
@@ -49,19 +49,22 @@ export default {
   section {
     height: 150px;
     background-color: $dc-color;
-    border: 1px solid white;
 
     .row > ._col {
       width: calc(100% / 5);
       display: flex;
       align-items: center;
       text-transform: uppercase;
-      padding: 0 15px;
+      padding-left: 25px;
       color: white;
 
       img {
-      width: 30%;
-      margin-right: 15px;
+      width: 25%;
+      margin-right: 10px;
+      }
+
+      #locator {
+        width: 20%;
       }
 
       div {
