@@ -1,22 +1,39 @@
 <template>
   <main>
-    <CardsComponent />
+    <div class="_container">
+      <div class="container-fluid">
+        <div class="row align-items-start">
+
+          <CardItem v-for="(item, index) in dcComics" :key="`item${index}`" 
+            :itemCard="item"
+          />
+          
+
+        </div>
+      </div>
+    </div>
+
+    <div>load more</div>
   </main>
 </template>
 
 <script>
+
 import dcComics from '../assets/data/dcComics';
-import CardsComponent from './components/CardsComponent.vue';
+import CardItem from './CardItem.vue';
+
+
 
 export default {
  name: 'MainComponent',
+ 
  components: {
-   CardsComponent,
+  CardItem
  },
 
   data() {
     return {
-      dcComics
+     dcComics
     }
   }
 }
@@ -28,15 +45,19 @@ export default {
 @import "../assets/utilities";
 
   main {
-    height: 120px;
-    background-color: black;
+    background-color: #1C1C1C;
+    padding-top: 50px;
+    text-align: center;
 
-    .row {
-      align-items: center;
-
-      div{
+    & > div:last-child {
+      display: inline-block;
       color: white;
-      }
+      text-transform: uppercase;
+      font-size: .8rem;
+      background-color: $dc-color;
+      margin: auto;
+      padding: 5px 35px;
+      margin: 20px 0;
     }
   }
 
