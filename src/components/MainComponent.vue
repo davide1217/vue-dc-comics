@@ -1,18 +1,24 @@
 <template>
   <main>
-    <div class="_container">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12"><h2> -- content goes here --</h2></div>
-        </div>
-      </div>
-    </div>
+    <CardsComponent />
   </main>
 </template>
 
 <script>
+import dcComics from '../assets/data/dcComics';
+import CardsComponent from './components/CardsComponent.vue';
+
 export default {
-  name: 'MainComponent'
+ name: 'MainComponent',
+ components: {
+   CardsComponent,
+ },
+
+  data() {
+    return {
+      dcComics
+    }
+  }
 }
 </script>
 

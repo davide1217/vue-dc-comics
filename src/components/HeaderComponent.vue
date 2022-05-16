@@ -106,6 +106,7 @@ export default {
           &:focus {
             padding-bottom: 49px;
             border-bottom: 4px solid $dc-color;
+            color: $dc-color;
           }
         }
       }

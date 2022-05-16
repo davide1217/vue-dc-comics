@@ -92,7 +92,7 @@ export default {
     height: calc(100vh - 390px);
 
     section:first-child {
-      height: calc(100% - 100px);
+      height: 350px;
       background-image: url(../assets/img/footer-bg.jpg);
       background-size: cover;
       overflow: hidden;
